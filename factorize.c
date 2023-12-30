@@ -3,20 +3,18 @@
 void factorize(int n){
 	int i, factor;
 
-	printf("%d=", n);
+	//printf("%d=", n);
 	/*find first factor*/
 	for (int i = 2; i <= n; i++)
 	{
 		if (n % i == 0)
 		{
 			factor = i;
-			printf("%d*", i);
-		
-			n /= i;
-			i = 1;
+			printf("%d=%d*%d\n", n, i, n/i);
+			return;
 		}
 	}
-	printf("\b \n");
+	printf("\n");
 }
 
 
