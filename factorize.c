@@ -1,30 +1,26 @@
 #include <stdio.h>
 
-void factorize(int n){
-	int i, factor;
+void factorize(long long int n){
+	long long int i;
 
-	//printf("%d=", n);
-	/*find first factor*/
-	for (int i = 2; i <= n; i++)
+	for (i = 2; i <= n/2; i++)
 	{
 		if (n % i == 0)
 		{
-			factor = i;
-			printf("%d=%d*%d\n", n, i, n/i);
+			printf("%lld=%lld*%lld\n", n, i, n/i);
 			return;
 		}
 	}
-	printf("\n");
 }
 
 
 int main(int argc, char *argv[])
 {
-	int num;
+	long long int num;
 
 	FILE *file = fopen(argv[1], "r");
 
-	while(fscanf(file, "%d", &num) == 1)
+	while(fscanf(file, "%lld", &num) == 1)
 		factorize(num);
 
 	fclose(file);
