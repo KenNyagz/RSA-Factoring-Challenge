@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void factorize(unsigned long long int n){
-	unsigned long long int i;
+void factorize(long long int n){
+	long long int i;
 
 	for (i = 2; i <= n/2; i++)
 	{
@@ -16,7 +16,7 @@ void factorize(unsigned long long int n){
 
 int main(int argc, char *argv[])
 {
-	unsigned long long int num;
+	long long int num;
 
 	FILE *file = fopen(argv[1], "r");
 
